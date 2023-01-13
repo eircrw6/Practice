@@ -347,6 +347,11 @@ h3.single-product-title {
   #collapsable-nav a { /* Collapsed nav menu text */
     font-size: 1.2em;
   }
+  #nav-list {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: green;
+}
 
   #call-btn > a {
     font-size: 1.5em;
