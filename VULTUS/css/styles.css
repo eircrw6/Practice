@@ -3,6 +3,7 @@ body {
   color: #000000;
   background-color: #FFFFFF;
   font-family: 'Oxygen', sans-serif;
+  text-align: center;
 }
 
 /** HEADER **/
@@ -56,7 +57,10 @@ body {
   text-align: center;
 }
 #nav-list a:hover {
-  background: #E7E7E7;
+  background: #323131;
+}
+.navbar-default .navbar-nav>.active>a {
+  background-color: #3c3a3a;
 }
 
 #phone {
@@ -139,28 +143,39 @@ body {
 
 /* HOME PAGE */
 .container .jumbotron {
+  margin-top: 20px;
   box-shadow: 0 0 20px #000000;
   border: 2px solid #000000;
-  padding-right: 14.8px;
-  padding-left: 14.8px;
+  padding-right: 20px;
+  padding-left: 20px;
+  position: relative;
+  height: 500px;
 }
-.jumbotron {
-/* background: url('../images/jumbotron-large.jpg') no-repeat; */
-margin-top: 30px;
-padding: 0px;
+#q1 {
+  float: left;
 }
-#q1, #q2, #q3 {
-  margin: 0px;
-  padding: 30px;
+#q2 {
+  float: right;
+}
+
+#q1, #q2 {
+  background-color: #99d5f036;
+  width: 45%;
+  height: 75%;
+  top:12.5%;
+  margin: auto 0;
+  position: relative;
+}
+#q1 span, #q2 span {
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
   text-align: center;
-}
-#q1, #q3 {
-  background-color: grey;
 }
 
 #products-tile, #map-tile {
   height: 260px;
-  width: 100%;
+  
   margin-bottom: 20px;
   position: relative;
   border: 2px solid #000000;
@@ -214,11 +229,12 @@ padding: 0px;
 #products-categories-title + div {
   margin-bottom: 50px;
 }
-/* PRODUCTS CATEGORIES PAGE */
+/* END OF PRODUCTS CATEGORIES PAGE */
 
 /* SINGLE PRODUCT CATEGORY PAGE */
 .single-product-tile {
   margin-bottom: 25px;
+  text-align: left;
 }
 .single-product-tile hr {
   width: 80%;
@@ -249,6 +265,16 @@ h3.single-product-title {
   font-size: .9em;
   font-style: italic;
 }
+.single-product-contact-links div {
+  font-weight: 600;
+  color: white;
+  background-color: green;
+  margin: 4px;
+  text-align: center;
+  height: 30px;
+  padding-top: 4px;
+  border-radius: 10px;
+}
 
 /* END OF SINGLE PRODUCT CATEGORY PAGE */
 
@@ -257,26 +283,19 @@ h3.single-product-title {
 @media (min-width: 1200px) {
   .container .jumbotron {
     /* background: url('../images/jumbotron_1200.jpg') no-repeat;  */
+    padding: 60px;
     height: 675px;
   }
-  #q1, #q2, #q3 {
-  height: 671px;
-  }
   #q1 {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    margin-right: 50px;
   }
-  #q3 {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+  #q2 {
+    margin-left: 50px;
   }
-
 }
 
-
-
 /********** Medium devices only **********/
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (max-width: 1199px) and (min-width: 992px)  {
   /* Header */
   #logo-img {
     background: url('../images/logo-medium.png') no-repeat;
@@ -291,46 +310,23 @@ h3.single-product-title {
     /* background: url('../images/jumbotron_992.jpg') no-repeat; */
     height: 558px;
   }
-  #q1, #q2, #q3 {
-  height: 554px;
-  }
-  #q1 {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-  }
-  #q3 {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
-  /* End Home Page */
+  /* End of Home Page */
 }
   
 
 /********** Small devices only **********/
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 991px) and (min-width: 768px) {
   /* Home Page */
   .container .jumbotron {
     /* background: url('../images/jumbotron_768.jpg') no-repeat;  */
     height: 432px;
-  }
-  #q1, #q3 {
-    height: 428px;
-  }
-  #q1 {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-  }
-  #q3 {
-    background-color: lightblue;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
   }
   /* End Home Page */
 }
 
 
 /********** Extra small devices only **********/
-@media (max-width: 767px) {
+@media (max-width: 766px) {
   /* Header */
   .navbar-brand {
     padding-top: 10px;
@@ -350,7 +346,7 @@ h3.single-product-title {
   #nav-list {
   margin-top: 0px;
   margin-bottom: 0px;
-  background-color: green;
+  background-color: #1e762f;
 }
 
   #call-btn > a {
@@ -383,30 +379,18 @@ h3.single-product-title {
   .panel-footer section hr {
     width: 50%;
   }
+  #tr {
+    margin-left: -22px;
+  }
   /* End Footer */ 
 
     /* Home Page */
   .container .jumbotron {
     /* background: url('../images/jumbotron_768.jpg') no-repeat; */
-    height: 432px;
   }
-  #q1, #q3 {
-    height: 214px;
-    margin-left: 0.5px;
-    margin-right: 0.8px;
-  }
-  #q1 {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-  }
-  #q3 {
-    background-color: lightblue;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;  
-  }
+
   #products-tile {
-    width: 380px;
-    height: 300px;
+    width: 360px;
     margin: 0 auto 15px;
     }
 
@@ -422,7 +406,11 @@ h3.single-product-title {
   }
   .single-product-description {
     text-align: center;
-
+  }
+  .single-product-contact-links div {
+    width: 55%;
+    margin-right: auto;
+    margin-left: auto;
   }
   /* END SINGLE CATEGORY PAGE */
 }
@@ -430,10 +418,31 @@ h3.single-product-title {
 /******** Exceptions ***********/
 @media (max-width: 479px) {
   /* Home Page */
+  .container .jumbotron {
+    /* background: url('../images/jumbotron_768.jpg') no-repeat; */
+    height: 500px;
+  }
+  #q1, #q2 {
+    width: 100%;
+    height: 45%;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+  }
+  #q1 {
+    top: 0;
+  }
+  
+  #q2 {
+    top: 9%;
+  }
   #products-tile {
     width: 290px;
     height: 200px;
     margin: 0 auto 15px;
+  }
+  #map-tile {
+    min-width: 290px;
   }
   .col-xxs-12 {
     position: relative;
@@ -442,9 +451,6 @@ h3.single-product-title {
     padding-left: 15px;
     float: left;
     width: 100%;
-  }
-    #map-tile {
-    min-width: 290px;
   }
 
   /* End of Home Page */
